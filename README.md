@@ -3,7 +3,7 @@
 Training LunarLander in OpenAI Gym using A2C.
 
 ## Dependencies
-Following packages needs to be installed: `numpy`, `matplotlib`, `torch` and `gym`
+Following packages need to be installed: `numpy`, `matplotlib`, `torch` and `gym`
 
 
 ## Usage
