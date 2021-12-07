@@ -12,6 +12,7 @@ class Actor(nn.Module):
         self.hidden1 = nn.Linear(in_size, hidden_size)
         self.hidden2 = nn.Linear(hidden_size, hidden_size)
         self.output = nn.Linear(hidden_size, out_size)
+        self.to(device)
 
     def forward(self, state):
         x = torch.as_tensor(state, dtype=torch.float32, device=self.device)
@@ -29,6 +30,7 @@ class Critic(nn.Module):
         self.hidden1 = nn.Linear(in_size, hidden_size)
         self.hidden2 = nn.Linear(hidden_size, hidden_size)
         self.output = nn.Linear(hidden_size, out_size)
+        self.to(device)
 
     def forward(self, state):
         x = torch.as_tensor(state, dtype=torch.float32, device=self.device)

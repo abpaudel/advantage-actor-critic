@@ -90,8 +90,8 @@ if __name__ == '__main__':
     torch.cuda.manual_seed_all(args.seed)
     env.seed(args.seed)
 
-    actor = Actor(obs_dim, args.hidden_size, n, device).to(device)
-    critic = Critic(obs_dim, args.hidden_size, 1, device).to(device)
+    actor = Actor(obs_dim, args.hidden_size, n, device)
+    critic = Critic(obs_dim, args.hidden_size, 1, device)
 
     optim_actor = Adam(actor.parameters(), lr=args.lr_actor)
     optim_critic = Adam(critic.parameters(), lr=args.lr_critic)
