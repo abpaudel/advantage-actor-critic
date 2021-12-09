@@ -68,7 +68,7 @@ if __name__ == '__main__':
     parser.add_argument('--hidden_size', type=int, default=32, help='Size of hidden layers')
     parser.add_argument('--lr_actor', type=float, default=1e-3, help='Actor learning rate')
     parser.add_argument('--lr_critic', type=float, default=1e-3, help='Critic learning rate')
-    parser.add_argument('--discount', type=float, default=0.99, help='Discount factor')
+    parser.add_argument('--discount', type=float, default=0.9, help='Discount factor')
     parser.add_argument('--seed', type=int, default=42, help='Random seed')
     parser.add_argument('--outpath', type=str, default='./results', help='Path to save results')
     parser.add_argument('--save_video', action='store_true', help='Saves video to outpath')
